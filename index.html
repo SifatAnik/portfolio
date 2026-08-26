@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sifatul.exe — Data Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><span class="dollar">$</span> Sifatul Islam<span class="cursor"></span></div>
+    <div class="center">
+      <a href="index.html" class="active">/home</a>
+      <a href="projects.html">/projects</a>
+      <a href="skills.html">/skills</a>
+      <a href="contact.html">/contact</a>
+    </div>
+    <div class="right">
+      <div class="status-chip"><span class="status-dot"></span> Level 2 Data Engineer</div>
+      <a class="icon-btn" href="#" title="GitHub">⌥</a>
+      <a class="icon-btn" href="#" title="LinkedIn">in</a>
+      <a class="icon-btn" href="mailto:sifatulislamk@gmail.com" title="Email">@</a>
+      <div class="icon-btn" id="themeToggle" title="Toggle theme">◐</div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="section-tag">whoami</div>
+        <div style="font-size:15px; color:var(--muted);">Hi, I'm</div>
+        <h1>Sifatul <span class="green">Islam</span><span class="cursor"></span></h1>
+        <div class="subtitle"><b>Level 2 Data Engineer</b> · Airflow · PySpark · SQL Server · AWS</div>
+        <blockquote>I build the ETL pipelines that quietly move product, identity, and support data into the warehouse — and the alerting that tells me when they don't.</blockquote>
+        <div class="whoami">
+          <div>$ whoami</div>
+          <div>→ Data Engineer <span class="g">·</span> Pipeline Debugger <span class="g">·</span> Bay Area, working with a team in Bangladesh</div>
+        </div>
+        <a href="projects.html" class="btn">View My Work →</a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="winbar"><span></span><span></span><span></span></div>
+        <div class="term-line"><span class="g">$</span> airflow dags trigger extract_load_pipeline</div>
+        <div class="term-line">→ status: <span class="g">running</span> <span class="a">·</span> workers: celery(4)</div>
+        <svg class="pipe" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+          <path id="p1" class="pedge" d="M20,30 C70,30 70,75 130,75"/>
+          <path id="p2" class="pedge" d="M20,75 L130,75"/>
+          <path id="p3" class="pedge" d="M20,120 C70,120 70,75 130,75"/>
+          <path id="p4" class="pedge" d="M230,75 L300,75"/>
+          <path id="p5" class="pedge" d="M370,75 L440,75"/>
+
+          <rect class="pbox" x="20" y="15" width="80" height="30" rx="5"/>
+          <text class="ptxt" x="60" y="34" text-anchor="middle">source</text>
+          <rect class="pbox" x="20" y="60" width="80" height="30" rx="5"/>
+          <text class="ptxt" x="60" y="79" text-anchor="middle">source</text>
+          <rect class="pbox" x="20" y="105" width="80" height="30" rx="5"/>
+          <text class="ptxt" x="60" y="124" text-anchor="middle">source</text>
+
+          <rect class="pbox on" x="130" y="55" width="100" height="40" rx="6"/>
+          <text class="ptxt on" x="180" y="80" text-anchor="middle">airflow</text>
+
+          <rect class="pbox" x="300" y="58" width="70" height="34" rx="5"/>
+          <text class="ptxt" x="335" y="79" text-anchor="middle">stage</text>
+
+          <rect class="pbox" x="440" y="58" width="55" height="34" rx="5"/>
+          <text class="ptxt" x="467" y="79" text-anchor="middle" style="font-size:9.5px;">production</text>
+
+          <circle class="pdot" r="3"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+          <circle class="pdot" r="3"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#p2"/></animateMotion></circle>
+          <circle class="pdot" r="3"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s"><mpath href="#p3"/></animateMotion></circle>
+          <circle class="pdot" r="3"><animateMotion dur="1.4s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+          <circle class="pdot" r="3"><animateMotion dur="1.4s" repeatCount="indefinite" begin="0.3s"><mpath href="#p5"/></animateMotion></circle>
+        </svg>
+        <div class="term-line" style="margin-top:10px;">→ all tasks <span class="g">success</span> ✓</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">3+</div><div class="lbl">Years Experience</div></div>
+      <div class="stat"><div class="num">15+</div><div class="lbl">Data Pipelines Shipped</div></div>
+      <div class="stat"><div class="num">12+</div><div class="lbl">Technologies</div></div>
+      <div class="stat"><div class="num">∞</div><div class="lbl">Cups of Coffee</div></div>
+    </div>
+
+    <div class="stack-panel">
+      <div class="stack-head"><b>Tech Stack</b><span>// always learning</span></div>
+      <div class="pill-row">
+        <span class="pill">Apache Airflow</span><span class="pill">PySpark</span><span class="pill">SQL Server</span>
+        <span class="pill">MongoDB</span><span class="pill">MySQL</span><span class="pill">Docker Compose</span>
+        <span class="pill">AWS EC2</span><span class="pill">Python</span><span class="pill">Flask</span>
+        <span class="pill">FastAPI</span><span class="pill">REST APIs</span><span class="pill">Bash</span>
+      </div>
+    </div>
+
+    <div class="widgets">
+      <div class="widget">
+        <div class="widget-head">🧩 Data Puzzle <span class="n">#01</span></div>
+        <p>In SQL Server, extracting a right-anchored numeric suffix from a string usually pairs <code>PATINDEX</code> with which function to search from the end?</p>
+        <div class="opt">A. LEN</div>
+        <div class="opt">B. REVERSE</div>
+        <div class="opt">C. CHARINDEX</div>
+        <button class="wbtn" onclick="document.getElementById('ans1').style.display='block'">Show Answer</button>
+        <div class="answer" id="ans1">→ B. REVERSE — reverse the string, run PATINDEX from the front, then map the position back.</div>
+      </div>
+
+      <div class="widget">
+        <div class="widget-head">😄 Random Dad Joke <span class="n" id="jokeNum">#01</span></div>
+        <p id="jokeText">$ joke --random<br>Why don't Airflow DAGs ever get lost? They always know their upstream and downstream.</p>
+        <button class="wbtn" onclick="nextJoke()">New Joke →</button>
+      </div>
+
+      <div class="widget">
+        <div class="widget-head">📌 Note to Self</div>
+        <div class="quote">"The pipeline doesn't lie. The logs do — until you find the real error underneath the wrapper."</div>
+        <div class="quote-by">— Sifatul</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; width:100%;">
+    <div>© 2026 Sifatul Islam — Level 2 Data Engineer. Built with curiosity, coffee and clean pipelines.</div>
+    <div><span class="g">●</span> All systems operational &nbsp;|&nbsp; Made with ❤ and Python</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
