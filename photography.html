@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography — Sifatul Islam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><span class="dollar">$</span> Sifatul Islam<span class="cursor"></span></div>
+    <div class="center">
+      <a href="index.html">/home</a>
+      <a href="projects.html">/projects</a>
+      <a href="skills.html">/skills</a>
+      <a href="photography.html" class="active">/photos</a>
+      <a href="contact.html">/contact</a>
+    </div>
+    <div class="right">
+      <div class="status-chip"><span class="status-dot"></span> Level 2 Data Engineer</div>
+      <a class="icon-btn" href="#" title="GitHub">⌥</a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/md-sifatul-islam-362971182" target="_blank" title="LinkedIn">in</a>
+      <a class="icon-btn" href="mailto:sifatulislamk@gmail.com" title="Email">@</a>
+      <div class="icon-btn" id="themeToggle" title="Toggle theme">◐</div>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap page-header">
+  <div class="section-tag">side quest</div>
+  <h1>Photography</h1>
+  <p>Streets, skies, and whatever's in frame when I'm not staring at DAGs. Shots are saved right in this browser — add one below.</p>
+</div>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+
+    <div class="stats" id="galleryStats">
+      <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl">Shots Saved</div></div>
+      <div class="stat"><div class="num" id="statTags">0</div><div class="lbl">Genres Tagged</div></div>
+      <div class="stat"><div class="num" id="statPlaces">0</div><div class="lbl">Locations</div></div>
+      <div class="stat"><div class="num" id="statRecent">0</div><div class="lbl">Added This Month</div></div>
+    </div>
+
+    <div class="term-card" style="margin-top:24px;">
+      <div class="cardhead">
+        <div class="winbar"><span></span><span></span><span></span></div>
+        <div class="backup-links">
+          <button type="button" id="exportBtn">export backup</button>
+          <button type="button" id="importBtn">import backup</button>
+          <input type="file" id="importFile" accept="application/json" style="display:none;">
+        </div>
+      </div>
+      <div class="term-line"><span class="g">$</span> photo add --new</div>
+      <form class="upload-form" id="photoForm" style="margin-top:14px;">
+        <label class="drop-zone" id="dropZone">
+          <img class="dz-preview" id="dzPreview" alt="">
+          <span id="dzText">Drag a photo here, or click to browse<br><span style="font-size:11px;">JPG or PNG · resized automatically</span></span>
+          <input type="file" id="photoInput" accept="image/*">
+        </label>
+
+        <div class="field">
+          <label>Caption</label>
+          <input type="text" id="captionInput" placeholder="Fog rolling over the Bay Bridge" maxlength="120">
+        </div>
+        <div class="field">
+          <label>Location (optional)</label>
+          <input type="text" id="locationInput" placeholder="San Francisco, CA" maxlength="60">
+        </div>
+        <div class="field">
+          <label>Genre</label>
+          <select id="tagInput">
+            <option value="Street">Street</option>
+            <option value="Landscape">Landscape</option>
+            <option value="Portrait">Portrait</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Nature">Nature</option>
+            <option value="Night">Night</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Date taken (optional)</label>
+          <input type="date" id="dateInput">
+        </div>
+
+        <button type="submit" class="savebtn">Save Shot →</button>
+        <div class="form-msg" id="formMsg"></div>
+      </form>
+    </div>
+
+    <div class="filter-row" id="filterRow">
+      <div class="chip active" data-tag="all">All</div>
+    </div>
+
+    <div id="emptyState" class="empty-state" style="display:none;">
+      $ ls ./photos<br><br>
+      <span class="g">→</span> no shots yet. Add your first capture above.
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-bar">
+      <div class="lightbox-nav">
+        <div class="icon-btn" id="lbPrev" title="Previous">←</div>
+        <div class="icon-btn" id="lbNext" title="Next">→</div>
+      </div>
+      <div class="icon-btn" id="lbClose" title="Close">✕</div>
+    </div>
+    <img class="lightbox-img" id="lbImg" alt="">
+    <div class="lightbox-cap" id="lbCap"></div>
+    <div class="lightbox-meta" id="lbMeta"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; width:100%;">
+    <div>© 2026 Sifatul Islam — Level 2 Data Engineer. Built with curiosity, coffee and clean pipelines.</div>
+    <div><span class="g">●</span> All systems operational &nbsp;|&nbsp; Made with ❤ and Python</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
