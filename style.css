@@ -223,3 +223,7 @@ footer .g{color:var(--green);}
 .lightbox-bar{display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;}
 .lightbox-nav{display:flex; gap:8px;}
 @media(max-width:820px){.upload-form{grid-template-columns:1fr;}}
+
+body:not(.is-admin) .admin-only{display:none !important;}
+#lockToggle.on{color:var(--green); border-color:var(--green);}
+.draft-badge{display:inline-block; font-size:10px; color:var(--amber); border:1px solid var(--amber); border-radius:20px; padding:2px 8px; margin-bottom:6px;}

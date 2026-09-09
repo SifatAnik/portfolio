@@ -25,6 +25,7 @@
       <a class="icon-btn" href="#" title="GitHub">⌥</a>
       <a class="icon-btn" href="https://www.linkedin.com/in/md-sifatul-islam-362971182" target="_blank" title="LinkedIn">in</a>
       <a class="icon-btn" href="mailto:sifatulislamk@gmail.com" title="Email">@</a>
+      <div class="icon-btn" id="lockToggle" title="Unlock uploads">🔒</div>
       <div class="icon-btn" id="themeToggle" title="Toggle theme">◐</div>
     </div>
   </div>
@@ -33,29 +34,30 @@
 <div class="wrap page-header">
   <div class="section-tag">side quest</div>
   <h1>Photography</h1>
-  <p>Streets, skies, and whatever's in frame when I'm not staring at DAGs. Shots are saved right in this browser — add one below.</p>
+  <p>Streets, skies, and whatever's in frame when I'm not staring at DAGs.</p>
 </div>
 
 <section style="padding-top:0;">
   <div class="wrap">
 
     <div class="stats" id="galleryStats">
-      <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl">Shots Saved</div></div>
+      <div class="stat"><div class="num" id="statTotal">0</div><div class="lbl">Shots Published</div></div>
       <div class="stat"><div class="num" id="statTags">0</div><div class="lbl">Genres Tagged</div></div>
       <div class="stat"><div class="num" id="statPlaces">0</div><div class="lbl">Locations</div></div>
       <div class="stat"><div class="num" id="statRecent">0</div><div class="lbl">Added This Month</div></div>
     </div>
 
-    <div class="term-card" style="margin-top:24px;">
+    <div class="term-card admin-only" id="adminPanel" style="margin-top:24px;">
       <div class="cardhead">
         <div class="winbar"><span></span><span></span><span></span></div>
         <div class="backup-links">
+          <button type="button" id="publishBtn">publish photos-data.js</button>
           <button type="button" id="exportBtn">export backup</button>
           <button type="button" id="importBtn">import backup</button>
           <input type="file" id="importFile" accept="application/json" style="display:none;">
         </div>
       </div>
-      <div class="term-line"><span class="g">$</span> photo add --new</div>
+      <div class="term-line"><span class="g">$</span> photo add --new <span style="color:var(--muted);">(admin mode — visitors don't see this panel)</span></div>
       <form class="upload-form" id="photoForm" style="margin-top:14px;">
         <label class="drop-zone" id="dropZone">
           <img class="dz-preview" id="dzPreview" alt="">
@@ -99,7 +101,7 @@
 
     <div id="emptyState" class="empty-state" style="display:none;">
       $ ls ./photos<br><br>
-      <span class="g">→</span> no shots yet. Add your first capture above.
+      <span class="g">→</span> no shots published yet. Check back soon.
     </div>
 
     <div class="gallery-grid" id="galleryGrid"></div>
@@ -129,6 +131,7 @@
   </div>
 </footer>
 
+<script src="photos-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
