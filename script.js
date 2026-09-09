@@ -27,6 +27,22 @@ document.addEventListener('DOMContentLoaded', function(){
       localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
     });
   }
+
+  // Mobile nav toggle
+  const navEl = document.querySelector('nav');
+  const navToggle = document.getElementById('navToggle');
+  if(navToggle && navEl){
+    navToggle.addEventListener('click', function(){
+      navEl.classList.toggle('open');
+      navToggle.textContent = navEl.classList.contains('open') ? '✕' : '☰';
+    });
+    navEl.querySelectorAll('.center a').forEach(function(link){
+      link.addEventListener('click', function(){
+        navEl.classList.remove('open');
+        navToggle.textContent = '☰';
+      });
+    });
+  }
 });
 
 // ===== Photography gallery =====

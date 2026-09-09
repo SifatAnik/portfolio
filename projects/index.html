@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Sifatul Islam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><a href="../"><span class="dollar">$</span> Sifatul Islam<span class="cursor"></span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <div class="center">
+      <a href="../">/home</a>
+      <a href="../projects/" class="active">/projects</a>
+      <a href="../skills/">/skills</a>
+      <a href="../hobby/">/hobby</a>
+      <a href="../contact/">/contact</a>
+    </div>
+    <div class="right">
+      <div class="status-chip"><span class="status-dot"></span> Level 2 Data Engineer</div>
+      <a class="icon-btn" href="#" title="GitHub">⌥</a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/md-sifatul-islam-362971182" target="_blank" title="LinkedIn">in</a>
+      <a class="icon-btn" href="mailto:sifatulislamk@gmail.com" title="Email">@</a>
+      <div class="icon-btn" id="themeToggle" title="Toggle theme">◐</div>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap page-header">
+  <div class="section-tag">selected work</div>
+  <h1>Projects</h1>
+  <p>Pipelines and services I've built and shipped — from raw source to warehouse to alert.</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="proj-grid">
+      <div class="proj">
+        <div class="proj-top"><h3>Modular ETL Framework</h3><span class="tagpill">foundational</span></div>
+        <p>Built a modular Airflow + PySpark + Docker Compose ETL framework from the ground up, extracting analytics event data into a SQL Server warehouse. Established a shared common-utilities architecture that every later pipeline builds on.</p>
+        <div class="tagrow"><span>airflow</span><span>pyspark</span><span>architecture</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>NoSQL → SQL Server Pipeline</h3><span class="tagpill">shipped</span></div>
+        <p>A PySpark pipeline migrating document-store data into a relational warehouse. Traced failed loads to a schema mismatch and type-mapping issue, then fixed the mapping end to end.</p>
+        <div class="tagrow"><span>mongodb</span><span>pyspark</span><span>schema</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>Reporting Data-Prep Pipeline</h3><span class="tagpill">shipped</span></div>
+        <p>A structured data-prep pipeline feeding downstream reporting tables in SQL Server, paired with a matching stored-procedure update to keep schema and logic in sync.</p>
+        <div class="tagrow"><span>t-sql</span><span>pyspark</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>Ticketing System ETL</h3><span class="tagpill">shipped</span></div>
+        <p>End-to-end pipeline: PySpark extraction from a support ticketing platform, a stored-procedure upsert, and full DAG chaining in Airflow.</p>
+        <div class="tagrow"><span>airflow</span><span>upsert</span><span>pyspark</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>Internal Data Chatbot + Observability API</h3><span class="tagpill">deployed</span></div>
+        <p>A Flask-based chatbot for querying the warehouse in plain language, plus a FastAPI service exposing pipeline health and data-freshness metrics with API-key auth — both running on EC2 under systemd.</p>
+        <div class="tagrow"><span>flask</span><span>fastapi</span><span>ec2</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>Failure Alerting Framework</h3><span class="tagpill">shipped</span></div>
+        <p>A priority-based log parser that surfaces the real Spark/SQL error hiding inside the orchestrator's generic wrapper exceptions, plus automated failure alerts for critical pipelines.</p>
+        <div class="tagrow"><span>airflow</span><span>alerting</span><span>logging</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>Retool Dashboards, Apps &amp; Workflows</h3><span class="tagpill">shipped</span></div>
+        <p>Built internal Retool dashboards and apps on top of the warehouse for non-technical teams, plus Retool workflows that automate recurring data tasks without needing a full backend service.</p>
+        <div class="tagrow"><span>retool</span><span>dashboards</span><span>workflow automation</span></div>
+      </div>
+      <div class="proj">
+        <div class="proj-top"><h3>Cross-Team Data API</h3><span class="tagpill">shipped</span></div>
+        <p>A FastAPI service backed by custom SQL queries and stored procedures that pulls data from the warehouse and exposes it through a single API endpoint, letting other teams consume the same clean data without direct database access.</p>
+        <div class="tagrow"><span>fastapi</span><span>sql</span><span>stored procedures</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; width:100%;">
+    <div>© 2026 Sifatul Islam — Level 2 Data Engineer. Built with curiosity, coffee and clean pipelines.</div>
+    <div><span class="g">●</span> All systems operational &nbsp;|&nbsp; Made with ❤ and Python</div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
